@@ -218,8 +218,8 @@
     },
 
     watch: {
-      navigateTo: function(val) {
-        if(val != this.currentPage) this.goToPage(val);
+      navigateTo(val) {
+        if (val !== this.currentPage) this.goToPage(val)
       }
     },
 
@@ -227,7 +227,7 @@
       /**
        * Given a viewport width, find the number of slides to display
        * @param  {Number} width Current viewport width in pixels
-       * @return {Number}       Number of slides to display
+       * @return {Number} Number of slides to display
        */
       breakpointSlidesPerPage() {
         if (!this.perPageCustom) {
